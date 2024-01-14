@@ -2,8 +2,7 @@
 
 'use strict';
 
-let find = (object, ...rest) => {
-  let value = rest.pop();
+let find = (object, value) => {
   for (let name in object) {
     if (object[name] !== value) {
     } else {
