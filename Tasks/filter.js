@@ -2,16 +2,17 @@
 
 'use strict';
 
-let Filter = (array, type) => {
+let filter = (array, type) => {
   let remove = [];
-  for (let C of array) {
-    let x = array.indexOf(C);
-    if (typeof array[x] !== type) {
-      remove.unshift(x);
+  for (let element of array) {
+    let index = array.indexOf(element);
+    if (typeof array[index] !== type) {
+      remove.unshift(index);
     }
   }
-  for (let x of remove) array.splice(x, 1);
+  for (let x of remove)
+    array.splice(x, 1);
   return array;
 };
 
-module.exports = Filter;
+module.exports = filter;
