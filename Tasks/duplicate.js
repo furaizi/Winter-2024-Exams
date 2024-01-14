@@ -3,12 +3,11 @@
 'use strict';
 
 let duplicate = (value, times) => {
-  if (times <= 0)
-    return [];
   let duplicates = [];
-  for (let i = 0; i < times; i++) {
+
+  for (let i = 0; i < times; i++)
     duplicates[i] = value;
-  }
+  
   return duplicates;
 };
 
