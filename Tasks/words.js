@@ -2,12 +2,12 @@
 
 'use strict';
 
-let Words = function (s) {
-  let number_of_words_in_s = 0;
+let countWords = function (str) {
+  let numberOfWords = 0;
   let flag = false;
-  for (let c of s) {
+  for (let char of str) {
     if (!flag) {
-      if (c === ' ') {
+      if (char === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -19,10 +19,10 @@ let Words = function (s) {
         } else {
           flag = true;
         }
-        number_of_words_in_s++;
+        numberOfWords++;
       }
     } else {
-      if (c === ' ') {
+      if (char === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -37,7 +37,7 @@ let Words = function (s) {
       }
     }
   }
-  return number_of_words_in_s;
+  return numberOfWords;
 };
 
-module.exports = Words;
+module.exports = countWords;
