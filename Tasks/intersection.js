@@ -4,13 +4,14 @@
 
 let intersection = (firstObject, secondObject) => {
   let firstObjectKeys = Object.keys(firstObject);
+
   for (let key of firstObjectKeys) {
-    if (firstObject[key] === secondObject[key]) {
+    if (firstObject[key] === secondObject[key])
       secondObject[key] = firstObject[key];
-    } else {
+    else
       delete firstObject[key];
-    }
   }
+  
   return firstObject;
 };
 
