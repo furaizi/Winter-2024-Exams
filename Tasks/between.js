@@ -11,16 +11,14 @@ let getvaluebetween = (str, prefix, suffix) => {
     let substringStart = prefixStart + prefix.length;
     str = str.substring(substringStart);
 
-    if (suffix) {
-      let suffixStart = str.indexOf(suffix);
+    let suffixStart = str.indexOf(suffix);
 
-      if (suffixStart === -1)
-        return '';
-      else
-        str = str.substring(0, suffixStart);
-    }
+    if (suffixStart === -1)
+      return '';
+    else
+      str = str.substring(0, suffixStart);
   }
-  
+
   return str;
 };
 
