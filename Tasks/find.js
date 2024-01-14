@@ -3,13 +3,11 @@
 'use strict';
 
 let find = (object, value) => {
-  for (let name in object) {
-    if (object[name] !== value) {
-    } else {
-      if (typeof name) return name;
-      if (typeof object) return object;
-    }
+  for (let key in object) {
+    if (object[key] === value)
+      return key;
   }
+  
   return undefined;
 };
 
