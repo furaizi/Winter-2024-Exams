@@ -2,8 +2,10 @@
 
 'use strict';
 
-let getRandomElement = (arr) => {
-  let randomElement = arr[Math.floor(Math.random() * arr.length)];
+let getRandomElement = (array) => {
+  let randomIndex = Math.floor(Math.random() * array.length);
+  let randomElement = array[randomIndex];
+  
   return randomElement;
 };
 
