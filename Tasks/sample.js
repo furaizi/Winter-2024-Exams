@@ -3,8 +3,8 @@
 'use strict';
 
 let getRandomElement = (arr) => {
-  arr = arr[Math.floor(Math.random() * arr.length)];
-  return arr;
+  let randomElement = arr[Math.floor(Math.random() * arr.length)];
+  return randomElement;
 };
 
 module.exports = getRandomElement;
