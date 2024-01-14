@@ -2,7 +2,7 @@
 
 'use strict';
 
-getvaluebetween = (str, prefix, suffix) => {
+let getvaluebetween = (str, prefix, suffix) => {
   let prefixStart = str.indexOf(prefix);
   if (prefixStart === -1) return '';
   else {
