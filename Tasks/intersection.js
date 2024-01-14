@@ -6,12 +6,10 @@ let intersection = (firstObject, secondObject) => {
   let firstObjectKeys = Object.keys(firstObject);
 
   for (let key of firstObjectKeys) {
-    if (firstObject[key] === secondObject[key])
-      secondObject[key] = firstObject[key];
-    else
+    if (firstObject[key] !== secondObject[key])
       delete firstObject[key];
   }
-  
+
   return firstObject;
 };
 
