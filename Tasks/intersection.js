@@ -3,14 +3,15 @@
 'use strict';
 
 let intersection = (firstObject, secondObject) => {
+  let intersectionObject = {};
   let firstObjectKeys = Object.keys(firstObject);
 
   for (let key of firstObjectKeys) {
-    if (firstObject[key] !== secondObject[key])
-      delete firstObject[key];
+    if (firstObject[key] === secondObject[key])
+      intersectionObject[key] = firstObject[key];
   }
 
-  return firstObject;
+  return intersectionObject;
 };
 
 module.exports = intersection;
