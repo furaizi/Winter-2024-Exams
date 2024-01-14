@@ -2,16 +2,16 @@
 
 'use strict';
 
-let getRange = (...range) => {
+let getNumberSequence = (...range) => {
   let [from, to] = range;
+  let numberSequence = [];
 
-  range = [];
   for (let i = from; i <= to; i++) {
-    range[i - from] = i;
+    numberSequence[i - from] = i;
   }
 
-  return range;
+  return numberSequence;
 
 };
 
-module.exports = getRange;
+module.exports = getNumberSequence;
