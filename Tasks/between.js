@@ -4,19 +4,17 @@
 
 let getValueBetween = (str, prefix, suffix) => {
   let prefixStart = str.indexOf(prefix);
+  let suffixStart = str.indexOf(suffix);
 
   if (prefixStart === -1)
     return '';
-
-  let substringStart = prefixStart + prefix.length;
-  str = str.substring(substringStart);
-  let suffixStart = str.indexOf(suffix);
-
   if (suffixStart === -1)
     return '';
-  str = str.substring(0, suffixStart);
 
-  return str;
+  let prefixEnd = prefixStart + prefix.length;
+  let substring = str.substring(prefixEnd, suffixStart);
+
+  return substring;
 };
 
 module.exports = getValueBetween;
