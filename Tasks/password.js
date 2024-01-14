@@ -1,9 +1,9 @@
 // Generate random password
 
-let generatePassword = (alphabet, length) => {
+let generatePassword = (alphabet, passwordLength) => {
   const MAX = alphabet.length;
   key = '';
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     index = Math.floor(Math.random() * MAX);
     key = key + alphabet[index];
   }
