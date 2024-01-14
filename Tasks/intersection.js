@@ -2,16 +2,16 @@
 
 'use strict';
 
-let intersection = (object_1, object_2) => {
-  let first_keys = Object.keys(object_1);
-  for (let attribute_name of first_keys) {
-    if (object_1[attribute_name] === object_2[attribute_name]) {
-      object_2[attribute_name] = object_1[attribute_name];
+let intersection = (firstObject, secondObject) => {
+  let firstObjectKeys = Object.keys(firstObject);
+  for (let key of firstObjectKeys) {
+    if (firstObject[key] === secondObject[key]) {
+      secondObject[key] = firstObject[key];
     } else {
-      delete object_1[attribute_name];
+      delete firstObject[key];
     }
   }
-  return object_1;
+  return firstObject;
 };
 
 module.exports = intersection;
