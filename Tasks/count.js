@@ -4,10 +4,9 @@
 
 let getSum = (obj) => {
   let sum = 0;
-  let keys = Object.keys(obj);
   let value;
 
-  for (const key of keys) {
+  for (const key in obj) {
     value = obj[key];
     if (typeof value === 'number')
       sum += value;
