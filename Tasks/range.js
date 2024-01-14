@@ -5,9 +5,6 @@
 let getRange = (...range) => {
   let [from, to] = range;
 
-  if (to < from)
-    return [];
-
   range = [];
   for (let i = from; i <= to; i++) {
     range[i - from] = i;
