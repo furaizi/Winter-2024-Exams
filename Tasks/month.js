@@ -17,12 +17,11 @@ const MONTHS = [
   'dec',
 ];
 
-let month = (s) => {
-  let l = MONTHS.length;
-  for (let i = 0; i < l; i++) {
+let getMonthNumber = (s) => {
+  for (let i = 0; i < MONTHS.length; i++) {
     if (s.toLowerCase().startsWith(MONTHS[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = month;
+module.exports = getMonthNumber;
