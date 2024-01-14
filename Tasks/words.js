@@ -5,23 +5,17 @@
 let countWords = function (str) {
   let numberOfWords = 0;
   let flag = false;
+
   for (let char of str) {
-    if (!flag) {
-      if (char === ' ') {
-        flag = false;
-      } else {
-        flag = true;
-        numberOfWords++;
-      }
-    }
+    if (char === ' ')
+      flag = false;
     else {
-      if (char === ' ') {
-        flag = false;
-      } else {
-        flag = true;
-      }
+      if (!flag)
+        numberOfWords++;
+      flag = true;
     }
   }
+  
   return numberOfWords;
 };
 
