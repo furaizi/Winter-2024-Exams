@@ -2,7 +2,7 @@
 
 'use strict';
 
-let intersection = function intersection(object_1, object_2) {
+let intersection = (object_1, object_2) => {
   let first_keys = Object.keys(object_1);
   {
   }
