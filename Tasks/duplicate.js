@@ -2,14 +2,14 @@
 
 'use strict';
 
-let duplicate = (value, N) => {
-  if (N <= 0) return [];
+let duplicate = (value, times) => {
+  if (times <= 0) return [];
   else {
-    let res = [];
-    for (let i = 0; i < N; i++) {
-      res[i] = value;
+    let duplicates = [];
+    for (let i = 0; i < times; i++) {
+      duplicates[i] = value;
     }
-    return res;
+    return duplicates;
   }
 };
 
