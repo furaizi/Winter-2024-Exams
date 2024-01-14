@@ -4,12 +4,15 @@
 
 let generatePassword = (alphabet, passwordLength) => {
   let key = '';
-  let index;
+  let randomIndex;
+  let randomChar;
 
   for (let i = 0; i < passwordLength; i++) {
-    index = Math.floor( Math.random() * alphabet.length );
-    key += alphabet[index];
+    randomIndex = Math.floor(Math.random() * alphabet.length);
+    randomChar = alphabet[randomIndex];
+    key += randomChar;
   }
+
   return key;
 };
 
