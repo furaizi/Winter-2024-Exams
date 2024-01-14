@@ -2,7 +2,7 @@
 
 'use strict';
 
-let getvaluebetween = (str, prefix, suffix) => {
+let getValueBetween = (str, prefix, suffix) => {
   let prefixStart = str.indexOf(prefix);
 
   if (prefixStart === -1)
@@ -19,4 +19,4 @@ let getvaluebetween = (str, prefix, suffix) => {
   return str;
 };
 
-module.exports = getvaluebetween;
+module.exports = getValueBetween;
