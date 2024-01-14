@@ -7,17 +7,14 @@ let getvaluebetween = (str, prefix, suffix) => {
 
   if (prefixStart === -1)
     return '';
-  else {
-    let substringStart = prefixStart + prefix.length;
-    str = str.substring(substringStart);
 
-    let suffixStart = str.indexOf(suffix);
+  let substringStart = prefixStart + prefix.length;
+  str = str.substring(substringStart);
+  let suffixStart = str.indexOf(suffix);
 
-    if (suffixStart === -1)
-      return '';
-    else
-      str = str.substring(0, suffixStart);
-  }
+  if (suffixStart === -1)
+    return '';
+  str = str.substring(0, suffixStart);
 
   return str;
 };
