@@ -2,7 +2,7 @@
 
 'use strict';
 
-let Months = [
+const MONTHS = [
   'jan',
   'feb',
   'mar',
@@ -17,12 +17,12 @@ let Months = [
   'dec',
 ];
 
-let Month = (s) => {
-  let l = Months.length;
+let month = (s) => {
+  let l = MONTHS.length;
   for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    if (s.toLowerCase().startsWith(MONTHS[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = month;
