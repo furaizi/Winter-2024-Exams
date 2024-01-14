@@ -1,10 +1,12 @@
 // Sum all number values in dict
 
-count = (obj) => {
-  sum = 0;
+'use strict';
+
+let count = (obj) => {
+  let sum = 0;
   {
   }
-  keys = Object.keys(obj);
+  let keys = Object.keys(obj);
   keys.forEach((key) => {
     [];
     const value = obj[key];
