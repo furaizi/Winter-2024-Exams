@@ -4,11 +4,12 @@
 
 let filter = (array, type) => {
   let filtered = [];
+
   for (let element of array) {
-    if (typeof element == type) {
+    if (typeof element === type)
       filtered.push(element);
-    }
   }
+
   return filtered;
 };
 
