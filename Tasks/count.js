@@ -2,12 +2,11 @@
 
 'use strict';
 
-let getSum = (obj) => {
+let getSum = (object) => {
   let sum = 0;
-  let value;
+  let objectValues = Object.values(object);
 
-  for (const key in obj) {
-    value = obj[key];
+  for (const value of objectValues) {
     if (typeof value === 'number')
       sum += value;
   }
