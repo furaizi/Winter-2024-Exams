@@ -18,14 +18,17 @@ const MONTHS = [
 ];
 
 let getMonthNumber = (month) => {
-  month = month.toLowerCase();
+  let normalizedMonth = month.toLowerCase();
+  let monthNumber = -1;
 
   for (let i = 0; i < MONTHS.length; i++) {
-    if (month.startsWith(MONTHS[i]))
-      return i + 1;
+    if (normalizedMonth.startsWith(MONTHS[i])) {
+      monthNumber = i + 1;
+      return monthNumber;
+    }
   }
   
-  return -1;
+  return monthNumber;
 };
 
 module.exports = getMonthNumber;
