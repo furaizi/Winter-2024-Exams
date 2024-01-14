@@ -2,20 +2,20 @@
 
 'use strict';
 
-let countWords = function (str) {
+let countWords = (str) => {
   let numberOfWords = 0;
-  let flag = false;
+  let isWordBoundary = true;
 
-  for (let char of str) {
+  for (const char of str) {
     if (char === ' ')
-      flag = false;
+    isWordBoundary = true;
     else {
-      if (!flag)
+      if (isWordBoundary)
         numberOfWords++;
-      flag = true;
+      isWordBoundary = false;
     }
   }
-  
+
   return numberOfWords;
 };
 
