@@ -8,11 +8,11 @@ let getRange = (...range) => {
   if (to < from)
     return [];
 
-  range = new Array(to - from + 1);
+  range = [];
   for (let i = from; i <= to; i++) {
     range[i - from] = i;
   }
-  
+
   return range;
 
 };
