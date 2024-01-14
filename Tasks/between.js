@@ -2,18 +2,18 @@
 
 'use strict';
 
-getvaluebetween = (str, p, s) => {
-  let i = str.indexOf(p);
-  if (i === -1) return '';
+getvaluebetween = (str, prefix, suffix) => {
+  let prefixStart = str.indexOf(prefix);
+  if (prefixStart === -1) return '';
   else {
-    let k = i + p.length;
-    str = str.substring(k);
-    if (s) {
-      i = str.indexOf(s);
-      if (i === -1) {
+    let substringStart = prefixStart + prefix.length;
+    str = str.substring(substringStart);
+    if (suffix) {
+      let suffixStart = str.indexOf(suffix);
+      if (suffixStart === -1) {
         return '';
       } else {
-        str = str.substring(0, i);
+        str = str.substring(0, suffixStart);
       }
     }
   }
