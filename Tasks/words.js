@@ -2,12 +2,21 @@
 
 'use strict';
 
-let countWords = (str) => {
-  const spaceDelimiter = /\s+/;
-  const wordsArray = str.split(spaceDelimiter);
-  const nonEmptyWords = wordsArray.filter(word => word.length > 0);
+const countWords = (str) => {
+  let numberOfWords = 0;
+  let isWordBoundary = true;
 
-  return nonEmptyWords.length;
+  for (const char of str) {
+    if (char === ' ')
+      isWordBoundary = true;
+    else {
+      if (isWordBoundary)
+        numberOfWords++;
+      isWordBoundary = false;
+    }
+  }
+
+  return numberOfWords;
 };
 
 module.exports = countWords;
