@@ -2,13 +2,20 @@
 
 'use strict';
 
-let generatePassword = (alphabet, passwordLength) => {
+const getRandomIndex = (maxIndex) => {
+  const randomDouble = Math.random() * maxIndex;
+  const randomIndex = Math.floor(randomDouble);
+
+  return randomIndex;
+};
+
+const generatePassword = (alphabet, passwordLength) => {
   let password = '';
   let randomIndex;
   let randomChar;
 
   for (let i = 0; i < passwordLength; i++) {
-    randomIndex = Math.floor(Math.random() * alphabet.length);
+    randomIndex = getRandomIndex(alphabet.length);
     randomChar = alphabet[randomIndex];
     password += randomChar;
   }
